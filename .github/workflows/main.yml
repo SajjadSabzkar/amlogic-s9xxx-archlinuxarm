@@ -15,7 +15,7 @@ jobs:
       - name: Prepare packages
         id : init
         run: |
-          echo "NOW=$(date +'%Y%m%d')" >> $GITHUB_ENV
+          echo "NOW=v$(date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV
           sudo apt update
           sudo apt install \
             arch-install-scripts \
